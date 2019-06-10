@@ -4,7 +4,8 @@
 \alias{Code_words}
 \title{Code single-word unprocessed responses}
 \usage{
-Code_words(data, text = "word", more2na = T, parallelize = T)
+Code_words(data, text = "word", more2na = T, parallelize = T,
+  print = T, debug = F)
 }
 \arguments{
 \item{data}{dataframe including the text to code}

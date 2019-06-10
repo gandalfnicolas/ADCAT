@@ -17,5 +17,5 @@ Code_sent(data, raw_text = "rawword", preproc_text = "word")
 Original dataframe with additional columns for codings
 }
 \description{
-This function allows you to code a variable of text responses into different sentiment scores. If available, sentiments are matched to raw words, otherwise they are matched to preprocessed words
+This function allows you to code a variable of text responses into different sentiment scores. If available, sentiments are matched to raw words, otherwise they are matched to preprocessed words.Average the different valence scores. If a SWN score is available for the correct sense, then average that with other valence scores, if not, then check if version one of the valence scores means is na, if so, get the average of the second versions, if not get the average of the first versions.
 }

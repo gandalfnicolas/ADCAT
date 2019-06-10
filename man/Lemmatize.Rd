@@ -4,7 +4,7 @@
 \alias{Lemmatize}
 \title{Lemmatizer}
 \usage{
-Lemmatize(word, print = T)
+Lemmatize(word, print = T, debug = F)
 }
 \arguments{
 \item{word}{word to lemmatize, if multiple use loop/apply/dplyr}

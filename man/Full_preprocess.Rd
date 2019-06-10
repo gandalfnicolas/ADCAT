@@ -4,7 +4,7 @@
 \alias{Full_preprocess}
 \title{Full preprocess}
 \usage{
-Full_preprocess(words, parallelize = T)
+Full_preprocess(words, parallelize = T, print = T, debug = F)
 }
 \arguments{
 \item{words}{text to preprocess}

@@ -20,3 +20,4 @@ Lemmatize = function(word, print =T, debug = F){
     print(lemmax@TT.res[["lemma"]])}
     return(lemmax@TT.res[["lemma"]])
 }}
+
