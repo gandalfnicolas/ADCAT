@@ -7,11 +7,10 @@
 #' @export Lemmatize
 
 
-Lemmatize = function(word, print =T){
+Lemmatize = function(word, print =T, debug = F){
   if (print == T){
-    print(word)
-  }
-  lemmax = koRpus::treetag(as.character(word), treetagger="manual", format="obj", TT.tknz=T, lang="en", TT.options=list(path="C:\\treetagger", preset="en"))
+    print(word)}
+    lemmax = koRpus::treetag(as.character(word), treetagger="manual", format="obj", debug = debug, TT.tknz=T, lang="en", TT.options=list(path="C:\\treetagger", preset="en"))
   if(lemmax@TT.res[["lemma"]] == "<unknown>"){
     if (print == T){
     print(lemmax@TT.res[["token"]])}
