@@ -13,13 +13,11 @@ Code_single = function(data, text = "word", more2na = T){
   Dicts_v3pre = unique(Dictionaries$word)
   res$NONE = as.numeric(!(as.matrix(res[[text]]) %in% as.matrix(Dicts_v3pre)))
   res$NONE2 = ifelse(stringr::str_count(res[[text]], "\\S+") > 2,NA,as.numeric(!(res[[text]]) %in% as.matrix(Dicts_v3pre)))
-  print(colnames(res))
   if(more2na == F){
     return(res)}
   else{
     data.table::setDT(res)
     nm1 <- grep('_dict', names(res), value=TRUE)
-    print(nm1)
     for(j in nm1){
       data.table::set(res, i=NULL, j=j, value= ifelse(stringr::str_count(res[[text]], "\\S+") > 2,NA, res[[j]]))}
     return(res)}
