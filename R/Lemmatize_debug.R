@@ -1,4 +1,4 @@
-#' @title Lemmatizer
+#' @title Lemmatizer with debug
 #'
 #' @description This function allows you lemmatize words using the treetag lemmatizer
 #' @param word word to lemmatize, if multiple use loop/apply/dplyr
@@ -7,17 +7,17 @@
 #' @export Lemmatize
 
 
-Lemmatize = function(word, print =T){
+Lemmatize_debug = function(word, print =T){
   if (print == T){
     print(word)
   }
-  lemmax = koRpus::treetag(as.character(word), treetagger="manual", format="obj", TT.tknz=T, lang="en", TT.options=list(path="C:\\treetagger", preset="en"))
+  lemmax = koRpus::treetag(as.character(word), treetagger="manual", format="obj", TT.tknz=T, debug=T, lang="en", TT.options=list(path="C:\\treetagger", preset="en"))
   if(lemmax@TT.res[["lemma"]] == "<unknown>"){
     if (print == T){
-    print(lemmax@TT.res[["token"]])}
+      print(lemmax@TT.res[["token"]])}
     return (lemmax@TT.res[["token"]])}
   else{
     if (print == T){
-    print(lemmax@TT.res[["lemma"]])}
+      print(lemmax@TT.res[["lemma"]])}
     return(lemmax@TT.res[["lemma"]])
-}}
+  }}
