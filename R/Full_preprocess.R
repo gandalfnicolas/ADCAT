@@ -24,7 +24,6 @@ Full_preprocess = function(words, parallelize = T, print =T, debug=F){
   else{
     res = sapply(res,Lemmatize)
   }
-  res = sapply(res, Lemmatize, debug = debug)
   res = sapply(res,delete_ending_Ss)
   res = mapply(Spellcheck,raw = words, cleaned = res, MoreArgs = list(rawlist = words, dict_cleaned= Dictionaries$word))
   res = as.character(res)
