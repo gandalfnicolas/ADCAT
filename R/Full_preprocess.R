@@ -13,6 +13,7 @@ Full_preprocess = function(words, parallelize = T, print =T, debug=F){
   res = sapply(res,tolower)
   res = sapply(res,clean_symbols)
   if(parallelize == T){
+    print("parallelizing")
     cl <- parallel::makeCluster(parallel::detectCores() - 1)
     parallel::clusterEvalQ(cl, {
       library(dplyr)
