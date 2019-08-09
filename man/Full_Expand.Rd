@@ -16,6 +16,3 @@ Full_Expand(datax, antonym = T, syns = F)
 \description{
 Gets see also, similar, attributes, hyponyms, antonyms, derivationally related forms, to expand a list of seed words.
 }
-\examples{
-Full_Expand(data_with_columns_terms_PoS_&_sense)
-}

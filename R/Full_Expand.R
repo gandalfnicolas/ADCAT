@@ -5,8 +5,7 @@
 #' @param antonym Obtain antonyms? Default is TRUE.
 #' @param syns return synsets? Default is FALSE. IF FALSE, returns words.
 #' @export
-#' @examples
-#' Full_Expand(data_with_columns_terms_PoS_&_sense)
+
 Full_Expand = function(datax, antonym = T, syns = F){
   WL = purrr::pmap(datax,get_Syns)
   if(antonym == T) {
