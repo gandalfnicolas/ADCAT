@@ -3,7 +3,6 @@ Title: Dictionary creation with stereotype content dictionaries
 Version: 0.0.0.9000
 Authors@R: person("Gandalf", "Nicolas", email = "gnf@princeton.edu", role = c("aut", "cre"))
 Description: Dictionary creation with stereotype content dictionaries.
-Depends: R (>= 3.5.3), stringi, koRpus.lang.en, hunspell, quanteda, purrr, parallel, dplyr,koRpus, data.table, stringr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
